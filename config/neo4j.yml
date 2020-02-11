@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  neo4j:
+    image: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - type: volume
+        source: $HOME/neo4j/data
+        target: /data
+      - type: volume
+        source: $HOME/neo4j/logs
+        target: /logs
